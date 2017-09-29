@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css?family=Cinzel');
+body{
+  background: #085959;
+  color: #fff;
+  display: grid;
+  font-family: 'Cinzel', serif;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  }
+
+
+
+.structure {
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  justify-content: space-around; 
+  margin: 0 auto
+}
+.structure li {
+  list-style:none;
+}
+  
+.container{
+  display: grid;
+  grid-auto-rows: minmax(100px, auto);
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+  
+}
+.container div:nth-child(1){
+  grid-column-start: 1;
+  
+}
+.container div:nth-child(2){
+  grid-column-start: 2;
+  
+}
+
+.container div:nth-child(3){
+  grid-column-start: 1;
+  grid-column-end: -1;
+}
+
+.container div:nth-child(4){
+  grid-column-start: 1;
+}
+.container div:nth-child(5){
+  grid-column-start: 2;
+}
+
+.container div:nth-child(6){
+  grid-column-start: 1;
+  grid-column-end: -1;
+}
+.container div:nth-child(7){
+  grid-column-start: 1;
+  grid-column-end: -1;
+}
+.container div{
+  display: grid;
+  background-color: #434147;
+  border: 1px solid #262528;
+  border-radius: 3px;
+  padding: 20px;
+  
+}
+.container .skills-img {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  border: 0;
+  margin: 10px;
+}
+
+.img {
+    width: 450px;
+    height: 300px;
+    border-radius: 8px;
+}
+.photo {
+    width: 450px;
+    height: 300px;
+    border-radius: 8px;
+}
+@media only screen and (max-width: 640px){
+  .container .skills-img {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-auto-rows: minmax(100px, auto);
+  border: 0;
+  
+}
+.skills-img {
+  width: 18%;
+}
+  .container{
+  display: grid;
+  grid-template-columns: 100%;
+  grid-gap: 20px;
+  
+}
+
+.container .photo {
+    display: grid;
+    border-radius: 8px;
+    grid-auto-rows: minmax(100px, auto);
+    grid-template-columns: 100%;
+}
+.container div:nth-child(1){
+  grid-column-start: 1;
+  grid-column-end: -1;
+}
+.container div:nth-child(2){
+  grid-column-start: 1;
+  grid-column-end: -1;
+}
+.container div:nth-child(4){
+  grid-column-start: 1;
+  grid-column-end: -1;
+}
+.container div:nth-child(5){
+  grid-column-start: 1;
+  grid-column-end: -1;
+}
+
+  @import "compass/css3";
+
+body {
+  background: #085959;
+  color: #fff;
+  font-family: 'Syncopate';
+  font-weight: 300;
+  text-align: center;
+}
+  .structure {
+    display: none;
+  }
+.nav {
+  background: transparent;
+  margin: 60px auto 40px;
+  position: relative;
+  height: 30px;
+  width: 50px;
+
+  &:before,
+  &:after {
+    background: #fff;
+    backface-visibility: hidden;
+    content: "";
+    height: 2px;
+    left: 0;
+    transition: 0.75s;
+    width: 50px;
+  }
+
+  &:before {
+    box-shadow: #fff 0 14px 0 0;
+    position: absolute;
+    top: 0;
+  }
+
+  &:after {
+    position: absolute;
+    top: calc(100% - 2px);
+  }
+
+  &:hover {
+
+    &:before {
+      box-shadow: transparent 0 0 0 0;
+      top: 50%;
+      transform: rotate(225deg);
+    }
+
+    &:after {
+      top: 50%;
+      transform: rotate(315deg);
+    }
+  }
+}
+}
