@@ -1,15 +1,30 @@
-@import url('https://fonts.googleapis.com/css?family=Cinzel:400,700'); 
+@import url('https://fonts.googleapis.com/css?family=Cinzel:400,700'); html {
+    background-color: #202226;
+}
+
 body {
-    background: #085959;
+    max-width: 1024px;
+    background-image: url(../images/bricks.jpg);
+    background-attachment: fixed;
     color: #fff;
     text-align: center;
     display: grid;
     font-family: 'Cinzel', serif;
-    max-width: 1024px;
-    margin: auto;
+    margin: 0 auto;
     padding: 20px;
-
 }
+
+nav {
+    display: grid;
+    grid-template-rows: 1fr;
+}
+
+.logo {
+    height: 35px;
+    width: 70px;
+    text-align: left;
+}
+
 #myName {
     text-align: center;
 }
@@ -23,45 +38,40 @@ body {
     border-radius: 8px;
 }
 
-.nav {
+nav ul {
     grid-template-columns: repeat(5, auto);
-    font-size: 16px;
+    font-size: 23px;
 }
 
 header nav {
     text-align: end;
     margin: auto;
+    grid-template-rows: 1fr;
 }
 
 header nav ul li {
     list-style-type: none;
-    display:inline-block;
+    display: inline-block;
 }
 
 header nav ul li a {
     text-decoration: none;
     color: white;
     margin: 0 8px;
-    background-color: #085959;
-    padding: 10px;
+    background-color: transparent;
+    padding: 5px;
     border-radius: 3px;
     cursor: pointer;
 }
 
 header nav ul li a:hover {
     color: white;
-    background-color: #434147;
+    background-color: #202226;
 }
 
 .container {
     display: grid;
-    grid-template-areas: "myName"
-                         "personal" 
-                         "about"
-                         "galery"
-                         "skills"
-                         "location" 
-                         "contact-me";
+    grid-template-areas: "myName" "personal" "about" "galery" "skills" "location" "contact-me";
     grid-template-rows: auto;
     grid-template-columns: 1fr;
     grid-gap: 20px;
@@ -70,114 +80,102 @@ header nav ul li a:hover {
 #myName {
     grid-area: myName;
 }
+
 #personal {
     grid-area: personal;
 }
+
 #about {
     grid-area: about;
 }
+
 #galery {
     grid-area: galery;
 }
+
 #skills {
     grid-area: skills;
 }
+
 #location {
     grid-area: location;
 }
+
 #contact-me {
     grid-area: contact-me;
 }
 
-/*.container div:nth-child(1) {*/
-/*    grid-column-start: 1;*/
-/*}*/
-
-/*.container div:nth-child(2) {*/
-/*    grid-column-start: 2;*/
-/*}*/
-
-/*.container div:nth-child(3) {*/
-/*    grid-column-start: 1;*/
-/*    grid-column-end: -1;*/
-/*}*/
-
-/*.container div:nth-child(4) {*/
-/*    grid-column-start: 1;*/
-/*}*/
-
-/*.container div:nth-child(5) {*/
-/*    grid-column-start: 2;*/
-/*}*/
-
-/*.container div:nth-child(6) {*/
-/*    grid-column-start: 1;*/
-    
-/*}*/
-
-/*.container div:nth-child(7) {*/
-/*    grid-column-start: 2;*/
-    
-/*}*/
-
-#skills-icons {
-    display: grid;
-    grid-template-rows: auto;
-    grid-template-columns: repeat(5, 20%);
-    grid-gap: 10px;
-    
+.mySlides {
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
 }
- #map {
-        height: 300px;
-        width: 100%;
-       }
-/*#contact-me #contacts {*/
-/*    display: grid;*/
-/*    grid-template-areas: "media-icons"  "ajax-form";*/
-    /*grid-template-columns: 1fr 1fr;*/
-/*    grid-template-rows: auto ;*/
-/*    grid-gap: 20px;*/
-/* }  */
- 
-/* #contacts {*/
-/*     grid-area: contacts;*/
-/* }*/
-/*#media-icons {*/
-/*    grid-area: media-icons;*/
-/*}*/
-/*#ajax-form {*/
-/*    grid-area: ajax-form;*/
-/*}    */
-    #contacts {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        
-    }
- 
-#firstname, #lastname, #email, textarea, #submit {
+
+.display-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+div .display-lr {
+    background-color: transparent;
+    border-radius: 3px;
+    width: 50px;
+    border-color: transparent;
+    color: white;
+}
+
+div .display-lr:hover {
+    background-color: #434147;
+    border-radius: 5px;
+}
+
+#map {
+    height: 300px;
+    width: 100%;
+}
+
+#contacts {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#firstname, #lastname, #email, textarea {
     width: 100%;
     height: 30px;
 }
+
 textarea {
     height: 200px;
 }
 
+#submit {
+    width: 100%;
+    height: 30px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+#submit:hover {
+    background-color: #45a049;
+}
 
 @media only screen and (max-width: 640px) {
     .burger-menu {
         display: block;
-        height: 40px;
-        width: 60px;
+        height: 60px;
         background: url(../images/burger.png) no-repeat 98% center;
         cursor: pointer;
         margin: 10px;
     }
-    
+
     header {
         grid-auto-columns: 1fr;
         grid-auto-rows: 1fr;
     }
-    
 
     header nav ul {
         overflow: hidden;
@@ -189,91 +187,45 @@ textarea {
         height: auto;
         margin: 0;
     }
-    
-     header nav ul li {
+
+    header nav ul li {
         text-align: center;
         margin: 0;
         display: grid;
     }
 
-    header nav ul li a{
-        background-color: #085959;
+    header nav ul li a {
+        background-color: transparent;
         color: #fff;
         border-bottom: 1px solid #404040;
         margin: 0 -40px;
         padding: 10px 0 10px 0;
     }
 
-    /*.container .skills-img {*/
-    /*    display: grid;*/
-    /*    grid-template-columns: 100%;*/
-    /*    grid-auto-rows: minmax(100px, auto);*/
-    /*    border: 0;*/
-    /*}*/
-
+    header nav .logo {
+        text-align: right;
+    }
 
     .container {
         display: grid;
-        grid-template-areas: "myName"
-                             "personal" 
-                             "about"
-                             "galery"
-                             "skills"
-                             "location"
-                             "contact-me";
+        grid-template-areas: "myName" "personal" "about" "galery" "skills" "location" "contact-me";
         grid-gap: 10px;
-        margin-top: 10px;                     
+        margin-top: 10px;
         grid-template-rows: auto;
         grid-template-columns: 100%;
     }
-#contacts {
+
+    #contacts {
         display: grid;
-        grid-template-columns; 1fr;
+        grid-template-areas: "media-icons" "ajax-form";
+        grid-template-columns: auto;
         grid-template-rows: auto;
-        grid-gap: 10px;
-        
+        grid-gap: 20px;
     }
-    #contacts:nth-child(1) {
-        grid-column-start: 1;
+}
+
+@media screen and (max-width: 810px) {
+    nav ul {
+        font-size:16px;
     }
-    #contacts:nth-child(1) {
-        grid-column-start: 2;
-    }
-   
-    /*.container .galery {*/
-    /*    display: grid;*/
-    /*    border-radius: 8px;*/
-    /*    grid-auto-rows: minmax(100px, auto);*/
-    /*    grid-template-columns: 100%;*/
-    /*}*/
-
-    .container div:nth-child(1) {
-        grid-column-start: 1;
-        grid-column-end: -1;
-    }
-
-    /*.container div:nth-child(2) {*/
-    /*    grid-column-start: 1;*/
-    /*    grid-column-end: -1;*/
-    /*}*/
-
-    /*.container div:nth-child(4) {*/
-    /*    grid-column-start: 1;*/
-    /*    grid-column-end: -1;*/
-    /*}*/
-
-    /*.container div:nth-child(5) {*/
-    /*    grid-column-start: 1;*/
-    /*    grid-column-end: -1;*/
-    /*}*/
-    
-    /* .container div:nth-child(6) {*/
-    /*    grid-column-start: 1;*/
-    /*    grid-column-end: -1;*/
-    /*}*/
-    
-    /* .container div:nth-child(7) {*/
-    /*    grid-column-start: 1;*/
-    /*    grid-column-end: -1;*/
-    /*}*/
 }

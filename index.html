@@ -5,12 +5,17 @@
         <meta name="viewport" content="initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <link rel="stylesheet" href="css/index.css" type="text/css"/>
-        <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
-        <title>My personal page</title>
+        <link rel="shortcut icon" href="images/nazarlogo.png" type="image/x-icon">
+        <title>Nazar Gaidamakh</title>
     </head>
     <body>
         <header>
             <nav>
+                <span class="logo">
+                    <a href="index.html">
+                        <img src="images/nazarlogo.png" alt="logo">
+                    </a>
+                </span>
                 <a class="burger-menu"></a>
                 <ul id="menu" class="nav">
                     <li>
@@ -33,31 +38,44 @@
         </header>
         <div class="container">
             <div id="myName">
-                <h1>Nazar Gaidamakha</h1>
-                </div>
+                <br>
+            </div>
             <div id="personal">
                 <img src="images/myJordan.jpg" alt="myJordan">
             </div>
             <div id="about">
                 <h2>About</h2>
                 <p>Hi there! My name is Nazar.  I`m 26 years old. I would like to be front-end developer, that`s why i study in SoftServe academy. My goal to learn faster, get job and start to grow up my career. </p>
-           <h2>Education</h2>
+                <h2>Education</h2>
                 <p>
                     Lviv State Polytechnic University   2008 - 2012 <br>bachelors degree
+                
                 </p>
                 <p>
                     Lviv State Polytechnic University   2012 - 2013 <br>masters degree
+                
                 </p>
                 <h3>International experience:</h3>
                 <p>
                     Work &Travel USA - 2011 <br>Work &Travel UAE - 2014
+                
                 </p>
             </div>
             <div id="galery">
-                <h2>Galery</h2><br>
-             </div>
+                <h2>Galery</h2>
+                <br>
+                <div class="display-container">
+                    <button class="display-lr" onclick="plusDivs(-1)">&#10094;</button>
+                    <img class="mySlides" src="images/alaska.jpg">
+                    <img class="mySlides" src="images/dubai.jpg">
+                    <img class="mySlides" src="images/snowboard.jpg">
+                    <img class="mySlides" src="images/camel.jpg">
+                    <button class="display-lr" onclick="plusDivs(1)">&#10095;</button>
+                </div>
+            </div>
             <div id="skills">
-                <h2>Skills</h2><br>
+                <h2>Skills</h2>
+                <br>
                 <div id="skills-icons">
                     <img src="images/html.png"></img>
                     <img src="images/css.png"></img>
@@ -68,47 +86,57 @@
             </div>
             <div id="location">
                 <h2>Location</h2>
-                <!--<br>-->
-                <!--<div class="contacts">-->
-                <!--    <h3>Location:</h3><br>-->
-                        <div id="map"></div>
-                <!--</div>-->
+                <div id="map"></div>
             </div>
-            
-            <div id="contact-me"> 
-               <h2>Contact me</h2>
-               </div>
+            <div id="contact-me">
+                <h2>Contact me</h2>
             </div>
+        </div>
         <div id="contacts">
-                       <div id="media-icons">
-                         <img src="images/facebook.png"></img> 
-                         <img src="images/gmail.png"></img>
-                         <img src="images/linkedin.png"></img>
-                       </div>
-                       <div id="ajax-form">
-                        <form>
-                            First name:<br>
-                            <input id="firstname" type="text" name="firstname">
-                            <br>
-                            Last name:<br>
-                            <input id="lastname" type="text" name="lastname">
-                            <br>
-                            E-mail:<br>
-                            <input id="email" type="email" name="email">
-                            <br>
-                            <br>
-                            <textarea name="message"></textarea>
-                            <br>
-                            <input id="submit" type="submit" value="SEND">
-                        </form>
-                       </div>
-            </div>
-        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-        <script src="js/scrollTo.js"></script>
-        <script src="js/map.js"></script>
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCpBGY2PUmPeyJLKNF9c6xPjl9Popvsjfc&callback=initMap" async defer></script>
-        <script src="js/form.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
-        
-    </body>
-</html>
+            <div id="media-icons">
+                <br>
+                <a href="https://www.facebook.com/nazar.gaidamakha">
+                    <img src="images/facebook.png"></img>
+                </a>
+                <img src="images/gmail.png"></img>
+                <a href="https://www.linkedin.com/in/nazar-gaidamaka-b4294670/">
+                    <img src="images/linkedin.png"></img>
+                </a>
+                <br>
+                <img src="images/viber.png"></img>
+                <img src="images/skype.png"></img>
+                <img src="images/whatsapp.png"></img>
+                <br>
+                <br>
+                <br>
+                <img src="images/placeholder.png">
+                <br>
+                Ternopilska 21g street,<br>Lviv city, Ukraine
+</img><br>
+<br>
+</div>
+<div id="ajax-form">
+    <form>
+        First name:<br>
+        <input id="firstname" type="text" name="firstname" placeholder="Your name..">
+        <br>
+        Last name:<br>
+        <input id="lastname" type="text" name="lastname" placeholder="Your last name..">
+        <br>
+        E-mail:<br>
+        <input id="email" type="email" name="email" placeholder="Enter your email adress..">
+        <br>
+        <br>
+        <textarea name="message" placeholder="Drop your question here.."></textarea>
+        <br>
+        <input id="submit" type="submit" value="SEND">
+    </form>
+</div>
+</div><script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<script src="js/scrollTo.js"></script>
+<script type="text/javascript" src="js/slide.js"></script>
+<script src="js/map.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCpBGY2PUmPeyJLKNF9c6xPjl9Popvsjfc&callback=initMap" async defer></script>
+<script src="js/form.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+</body></html>
