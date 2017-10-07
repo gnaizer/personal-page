@@ -21,7 +21,7 @@ nav {
 
 .logo {
     height: 35px;
-    width: 70px;
+    /*width: 70px;*/
     text-align: left;
 }
 
@@ -66,7 +66,7 @@ header nav ul li a {
 
 header nav ul li a:hover {
     color: white;
-    background-color: #202226;
+    background-color: #434147;
 }
 
 .container {
@@ -203,8 +203,9 @@ textarea {
     }
 
     header nav .logo {
-        text-align: right;
+        text-align: left;
     }
+    
 
     .container {
         display: grid;
